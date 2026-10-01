@@ -29,6 +29,7 @@ After reviewing the data, I chose to build a **market research dashboard** rathe
 
 1. **Split the order purchase timestamp into date and time columns.** The purchase time is still valuable, but Power BI requires a pure date column to build a date table. Separating the original timestamp into a date column and a time column solves this while preserving both.
 2. **Mapped state abbreviations to full state names.** The customers table only contained state abbreviations (e.g. `SP`), which Power BI's native filled map failed to recognize. Using Python, I merged in a CSV of Brazilian states and their abbreviations, then stripped accents and diacritics from the state names using Python's `unicodedata` module, since the map visual requires plain characters. This added a new state name feature to the customers table.
+![State abbreviation mapping](olist-data-preparation.ipynb)
 
 ## Tools Used
 
@@ -38,7 +39,12 @@ After reviewing the data, I chose to build a **market research dashboard** rathe
 
 ## Future Improvements
 
-Track additional variables to better help people assess product marketability from the current market research.
+This dashboard showcases minimal descriptive analytics. Future improvements will cater to the data professional as the audience by using DAX measures to track:
+1. Compound Growth Annual  Rate (CGAR) between categories to see potential market growth
+2. Coefficient of Variation (CV) between products to measure product value and demand variability
+3. BCG Matrix for a clearer vision on product values
+
+As for now, the dashboard maintains simplicity for a quick reference to the non-technical audience.
 
 ## Data Source
 
