@@ -2,8 +2,7 @@
 
 A market research dashboard built in Power BI from the Olist Brazilian e-commerce dataset on Kaggle. It helps sellers assess product marketability by looking at demand, pricing, geography, and market saturation.
 
-![Dashboard preview](images/dashboard.png)
-<!-- Replace with a screenshot of your dashboard -->
+![Dashboard preview](images/dashboard-preview.png)
 
 ## Background
 
